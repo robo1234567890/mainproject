@@ -1,0 +1,60 @@
+/* This container will hold the vendor cards */
+.whole {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    gap: 2rem; /* Optional: adds space between the cards */
+ 
+}
+
+/* Vendor card styles */
+.vendor-card {
+    max-width: 500px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    flex: 1 1 calc(33% - 1rem); /* Makes cards take up a third of the space, with space between them */
+    
+    justify-items: center;
+    align-content: center;
+}
+/* VendorCard.css */
+.location-icon {
+    margin-right: 8px; /* Space between the icon and text */
+    vertical-align: middle; /* Aligns the icon with the text */
+    color: #4b5563; /* Tailwind's text-gray-600 color for the icon */
+  }
+  
+
+/* Image style */
+.vendor-card img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Other styles remain the same */
+.vendor-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.vendor-location {
+    color: #4b5563;
+}
+
+.vendor-price {
+    font-weight: 700;
+}
+
+.vendor-details {
+    color: #fbbf24;
+}
+
+.link {
+    display: block;
+    margin-top: 1rem;
+    color: #3b82f6;
+}

@@ -1,0 +1,95 @@
+/* VendorDetails.css
+
+.vendor-details-container {
+  padding: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.vendor-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.vendor-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.vendor-location {
+  color: #4b5563;
+}
+
+.vendor-price {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.vendor-details-info {
+  margin-top: 16px;
+}
+
+.vendor-rating {
+  color: #fbbf24;
+}
+
+.link {
+  display: block;
+  margin-top: 24px;
+  color: #3b82f6;
+} */
+/* VendorDetails.css */
+.whole {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 1rem; /* Optional: adds space between the cards */
+  align-items: center;
+    justify-content: center;
+}
+.vendor-details-container {
+    padding: 24px;
+    max-width: 700px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .vendor-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .vendor-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+  
+  .vendor-location {
+    color: #4b5563;
+  }
+  
+  .vendor-price {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  .vendor-details-info {
+    margin-top: 16px;
+  }
+  
+  .vendor-rating {
+    color: #fbbf24;
+  }
+  
+  .link {
+    display: block;
+    margin-top: 24px;
+    color: #3b82f6;
+  }
+  

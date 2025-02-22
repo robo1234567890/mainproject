@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "Notting Hills",
+    "location": "Sector 17, Gurgaon",
+    "price": "On Request",
+    "capacity": "1000-1500 pax",
+    "rooms": "2 Rooms",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/036/226/872/small/ai-generated-nature-landscapes-background-free-photo.jpg",
+    "rating": 5,
+    "reviews": 1
+  },
+  {
+    "id": 2,
+    "name": "Hilton Goa Resort",
+    "location": "North Goa",
+    "price": "₹2,400 per plate",
+    "capacity": "100-400 pax",
+    "rooms": "104 Rooms",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/036/226/872/small/ai-generated-nature-landscapes-background-free-photo.jpg",
+    "rating": 5,
+    "reviews": 1
+  }
+,
+{
+  "id": 2,
+  "name": "Hilton Goa Resort",
+  "location": "North Goa",
+  "price": "₹2,400 per plate",
+  "capacity": "100-400 pax",
+  "rooms": "104 Rooms",
+  "image": "https://static.vecteezy.com/system/resources/thumbnails/036/226/872/small/ai-generated-nature-landscapes-background-free-photo.jpg",
+  "rating": 5,
+  "reviews": 1
+}
+]
