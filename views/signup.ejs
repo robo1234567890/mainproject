@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+     .whole{
+           
+            box-sizing:content-box;
+          
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 130vh;
+            background-color: #f4f4f4;
+        }
+
+        .wrapper{
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px gray;
+            width: 90%;
+            max-width: 700px;
+        }
+
+        .container {
+            width: 40%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .signup-btn {
+            background-color: #28a745;
+        }
+
+        .signin-btn {
+            background-color: #007bff;
+            margin-top: 10px;
+        }
+
+        .image-container {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            height: 350px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .image-container img.active {
+            opacity: 1;
+        }
+
+        /* 🔹 Responsive Styles */
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;
+                max-width: 400px;
+            }
+
+            .container,
+            .image-container {
+                width: 100%;
+            }
+
+            .image-container {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="whole">
+    <div class="wrapper">
+        <div class="container">
+            <h1>Sign Up</h1>
+            <form id="signupForm">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="text" name="mobile" placeholder="Mobile Number" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="address" id="address" placeholder="Address" required>
+                <p id="error-message" style="color: red; display: none;">Invalid address. Please enter a valid address.</p>
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+            <p>Already have an account?</p>
+            <button class="signin-btn" onclick="window.location.href='/signin'">Sign In</button>
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ1ipeQbFseUM_GzxwMoQj45w9HtAnu4eu5w&s" class="active" alt="Signup Image 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_2OtC5ofcKi8b7-3nE91WYSINPjME6wMf30TKe-9VVVENnR4BLJ6PcL7HIUoSOBiY4Ac&usqp=CAU" alt="Signup Image 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUidegqgjUFg5xGV-BkUSeWym9exvnqZUh2jirtUGGyKfE9xnVb5BR2CErB4TeqQZx-F4&usqp=CAU" alt="Signup Image 3">
+        </div>
+    </div>
+</div>
+    <script>
+        let images = document.querySelectorAll('.image-container img');
+        let index = 0;
+
+        function changeImage() {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }
+
+        setInterval(changeImage, 2000); // Change image every 2 seconds
+
+        async function validateAddress(address) {
+            const apiKey = "YOUR_GEMINI_API_KEY"; // Replace with your actual API key
+            const url = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateText?key=${apiKey}`;
+
+            const requestBody = {
+                prompt: {
+                    text: `Is the following address a valid and real address? Please answer only with "valid" or "invalid". Address: ${address}`
+                }
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                const data = await response.json();
+                const responseText = data?.candidates?.[0]?.output || "";
+
+                return responseText.toLowerCase().includes("valid");
+            } catch (error) {
+                console.error("Error validating address:", error);
+                return null;
+            }
+        }
+
+        document.getElementById("signupForm").addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent form submission
+            const address = document.getElementById("address").value;
+            const errorMessage = document.getElementById("error-message");
+
+            errorMessage.style.display = "none"; // Hide error message
+
+            const isValid = await validateAddress(address);
+            if (isValid) {
+                alert("Address is valid. Submitting form...");
+                this.submit(); // Submit the form if address is valid
+            } else {
+                errorMessage.style.display = "block"; // Show error message
+            }
+        });
+    </script>
+</body>
+</html>

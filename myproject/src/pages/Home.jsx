@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import VendorCard from "../components/VendorCard";
-
+import EventHome from '/workspaces/mainproject/myproject/src/EventHome.jsx'
 const Home = () => {
   const [vendors, setVendors] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,12 +28,17 @@ const Home = () => {
   };
 
   return (
-    <div style={gridStyle}>
-      {vendors.map((vendor) => (
-        <VendorCard key={vendor.id} vendor={vendor} />
-      ))}
+    <div >
+      {/* <EventHome/> */}
+      
+      <div style={gridStyle}>
+{vendors.map((vendor) => (
+  <VendorCard key={vendor.id} vendor={vendor} />
+))}
+</div>
     </div>
   );
 };
 
 export default Home;
+{/*  */}
