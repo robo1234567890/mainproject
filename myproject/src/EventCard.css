@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  
+  .containereventcard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    gap: 25px;
+  }
+  
+  .event-box {
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .event-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .event-box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .event-box img:hover {
+    width: 200px;
+    height: 200px;
+    border-radius: 60%;
+  }
+  
+  .event-box p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .marquee {
+    color: #c91313da;
+    padding: 5px 0;
+    font-size: 20px;
+    direction: left;
+    background-color:  #e9ecef;
+  }
+  
