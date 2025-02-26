@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import EventHome from "./EventHome";
 import EventCard from "./EventCard";
 import VendorDetails from "./components/VendorDetails";
-import { CustomerLogin } from "./CustomerLogin";
+import CustomerLogin  from "./CustomerLogin";
 
 const App = () => {
   return (
