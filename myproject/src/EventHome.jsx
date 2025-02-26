@@ -1,13 +1,13 @@
 import React from 'react';
-import './EventHome.css'; // Importing the updated CSS file
-import Header from '/workspaces/mainproject/myproject/src/Header.jsx'
+import { Link } from 'react-router-dom';
+import './EventHome.css';
+import Header from '/workspaces/mainproject/myproject/src/Header.jsx';
 import Footer from './Footer';
 
 const EventHome = () => {
   return (
     <div className="containerHome">
-      
-      <Header/>
+      <Header />
       <img
         src="https://static.wixstatic.com/media/90a441_eccfceea28d6446b90cdf16823900c7a~mv2.jpg/v1/fill/w_1000,h_463,al_c,q_85,enc_auto/90a441_eccfceea28d6446b90cdf16823900c7a~mv2.jpg"
         width="100%"
@@ -20,7 +20,7 @@ const EventHome = () => {
       </div>
 
       <div className="cardContainerHome">
-        <a className="cardHome">
+        <Link to="/weddings" className="cardHome">
           <div className="circleHome">
             <img
               src="https://www.admin.booktheparty.in/assets/images/category_icons/marraige.png"
@@ -31,9 +31,9 @@ const EventHome = () => {
           <p>
             Wedding celebration is now easy. We are providing all services regarding weddings in which you can contact vendors easily with one click.
           </p>
-        </a>
+        </Link>
 
-        <a className="cardHome">
+        <Link to="/birthdays" className="cardHome">
           <div className="circleHome">
             <img
               src="https://www.admin.booktheparty.in/assets/images/category_icons/birthdays.png"
@@ -44,9 +44,9 @@ const EventHome = () => {
           <p>
             Birthday celebration is now easy. We are providing all services regarding birthdays in which you can contact vendors easily with one click.
           </p>
-        </a>
+        </Link>
 
-        <a  className="cardHome">
+        <Link to="/events" className="cardHome">
           <div className="circleHome">
             <img
               src="https://www.admin.booktheparty.in/assets/images/category_icons/surprise_party.png"
@@ -57,9 +57,9 @@ const EventHome = () => {
           <p>
             Other celebrations are now easy. We are providing all services regarding your celebrations in which you can contact vendors easily with one click.
           </p>
-        </a>
+        </Link>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

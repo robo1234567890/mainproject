@@ -21,6 +21,7 @@ bodyHome {
     justify-content: center;
     margin: 20px 0;
     flex-wrap: wrap;
+    
 }
 
 /* Card styles for EventHome */
@@ -31,6 +32,7 @@ bodyHome {
     width: 250px;
     padding: 20px;
     text-align: center;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;

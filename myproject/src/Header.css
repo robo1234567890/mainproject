@@ -85,8 +85,92 @@
     color: white;
     font-size: 32px;
     text-decoration: none;
-    padding-top: 20px;
+    padding-top: 18px;
     position:absolute;
     right: 20px;
 }
 
+.nav-menu { 
+   
+    list-style-type: none;
+     padding-top:13px; 
+    position:absolute;
+    right:200px;
+    overflow: hidden;
+   
+}
+.nav-menu li {
+    
+    float:left;
+    font-size: 23px;
+    gap:10px;
+}
+.nav-menu li a {
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.menu-icon {
+    display: none;
+  
+}
+
+@media (max-width: 800px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-icon {
+        padding-top:22px;
+        position:absolute;
+        right:200px;
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Show menu when hovering over the icon */
+    .nav-menu.open {
+        display: flex ;
+        flex-direction: column;
+        background-color: #e82c74;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        padding: 10px;
+    }
+}
+
+
+
+.login-signup {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+
+
+
+.login-signup button {
+    margin: 0 3px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .login {
+    background-color: white;
+    color: black;
+  }
+  
+  .signup {
+    background-color: white;
+    color: black;
+  }
+  
