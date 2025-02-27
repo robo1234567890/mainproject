@@ -20,7 +20,7 @@ const EventHome = () => {
       </div>
 
       <div className="cardContainerHome">
-        <Link to="/weddings" className="cardHome">
+        <Link to="/marrage" className="cardHome">
           <div className="circleHome">
             <img
               src="https://www.admin.booktheparty.in/assets/images/category_icons/marraige.png"

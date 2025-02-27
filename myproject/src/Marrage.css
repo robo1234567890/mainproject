@@ -1,25 +1,30 @@
 .wholebody {
-  font-family: Arial, sans-serif;
-  margin: auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  width:70%;
-}
-
-  .containereventcard {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width:70%;
+  }
+  
+  
+  .marquee {
+    color: #c91313da;
+    padding: 5px 0;
+    font-size: 1.2em;
+  }
+/*   
+  .container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: #fff;
     padding: 20px;
-    width: 100%;
-    gap: 25px;
   }
   
   .event-box {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     text-align: center;
     padding: 20px;
     margin: 10px;
@@ -34,15 +39,9 @@
   }
   
   .event-box img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-  }
-  
-  .event-box img:hover {
-    width: 200px;
-    height: 200px;
-    border-radius: 60%;
   }
   
   .event-box p {
@@ -50,12 +49,4 @@
     font-size: 1.1em;
     color: #333;
   }
-  
-  .marquee {
-    color: #c91313da;
-    padding: 5px 0;
-    font-size: 20px;
-    direction: left;
-    background-color:  #e9ecef;
-  }
-  
+   */
